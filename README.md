@@ -1,6 +1,6 @@
-# Wisata Majalengka - Landing Page Promosi Objek Wisata
+# Wisata Pangalengan - Landing Page Promosi Objek Wisata
 
-Landing page statis **single-file HTML** untuk promosi objek wisata di Majalengka, Jawa Barat.
+Landing page statis **single-file HTML** untuk promosi objek wisata di Pangalengan, Jawa Barat.
 
 ## 📁 Struktur
 
