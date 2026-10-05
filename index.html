@@ -103,8 +103,10 @@ input, textarea { font-family: inherit; font-size: 1rem; }
     background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 50%, #065f46 100%);
     overflow: hidden;
 }
-.hero-overlay { position: absolute; inset: 0; background: radial-gradient(ellipse at 30% 20%, rgba(37,99,235,.15) 0%, transparent 50%), radial-gradient(ellipse at 70% 80%, rgba(5,150,105,.15) 0%, transparent 50%); }
-.hero-content { position: relative; z-index: 1; padding-top: 72px; }
+.hero-bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 30%; }
+.hero::after { content: ''; position: absolute; inset: 0; background: linear-gradient(135deg, rgba(30,58,138,.75) 0%, rgba(30,64,175,.65) 50%, rgba(6,95,70,.55) 100%); }
+.hero-overlay { position: absolute; inset: 0; background: radial-gradient(ellipse at 30% 20%, rgba(37,99,235,.15) 0%, transparent 50%), radial-gradient(ellipse at 70% 80%, rgba(5,150,105,.15) 0%, transparent 50%); z-index: 1; }
+.hero-content { position: relative; z-index: 2; padding-top: 72px; }
 .hero-text { max-width: 720px; }
 .hero-text h1 { font-size: clamp(2.5rem, 6vw, 4rem); font-weight: 800; line-height: 1.15; color: var(--white); margin-bottom: 1.5rem; text-shadow: 0 4px 20px rgba(0,0,0,.2); }
 .hero-text p { font-size: clamp(1.125rem, 2.5vw, 1.375rem); color: rgba(255,255,255,.9); margin-bottom: 2rem; max-width: 540px; }
@@ -272,6 +274,7 @@ input, textarea { font-family: inherit; font-size: 1rem; }
 
     <!-- Hero Section -->
     <section id="home" class="hero">
+        <img src="assets/img/hero.jpg" alt="Kegiatan Wisata Majalengka" class="hero-bg" loading="eager">
         <div class="hero-overlay"></div>
         <div class="container hero-content">
             <div class="hero-text">
@@ -301,10 +304,7 @@ input, textarea { font-family: inherit; font-size: 1rem; }
             </div>
             <div class="tentang-content">
                 <div class="tentang-img">
-                    <div class="placeholder-img" style="aspect-ratio:4/3;border-radius:12px;box-shadow:0 20px 25px -5px rgba(0,0,0,.1);">
-                        <i class="bi bi-image" style="font-size:3rem;margin-bottom:.5rem;"></i>
-                        <div>Ganti dengan foto asli<br><small style="font-weight:400;">about.jpg</small></div>
-                    </div>
+                    <img src="assets/img/about.jpg" alt="Persiapan kegiatan wisata - helm dan pelampung" loading="lazy">
                 </div>
                 <div class="tentang-text">
                     <h3>Wisata Alam yang Menawan</h3>
@@ -332,28 +332,20 @@ input, textarea { font-family: inherit; font-size: 1rem; }
             </div>
             <div class="gallery-grid" id="galleryGrid">
                 <figure class="gallery-item">
-                    <div class="placeholder-img" style="width:100%;height:100%;">
-                        <div><i class="bi bi-image" style="font-size:2.5rem;"></i><br>Kegiatan Wisata Seru<br><small>gallery-1.jpg</small></div>
-                    </div>
-                    <figcaption>Kegiatan Wisata Seru</figcaption>
+                    <img src="assets/img/gallery-1.jpg" alt="Keluarga berjalan di area wisata" loading="lazy">
+                    <figcaption>Keluarga di Area Wisata</figcaption>
                 </figure>
                 <figure class="gallery-item">
-                    <div class="placeholder-img" style="width:100%;height:100%;">
-                        <div><i class="bi bi-image" style="font-size:2.5rem;"></i><br>Spot Foto Menarik<br><small>gallery-2.jpg</small></div>
-                    </div>
-                    <figcaption>Spot Foto Menarik</figcaption>
+                    <img src="assets/img/gallery-2.jpg" alt="Cabin kayu dan rombongan wisata" loading="lazy">
+                    <figcaption>Cabin Kayu - Spot Istirahat</figcaption>
                 </figure>
                 <figure class="gallery-item">
-                    <div class="placeholder-img" style="width:100%;height:100%;">
-                        <div><i class="bi bi-image" style="font-size:2.5rem;"></i><br>Wisata Keluarga<br><small>gallery-3.jpg</small></div>
-                    </div>
-                    <figcaption>Wisata Bersama Keluarga</figcaption>
+                    <img src="assets/img/gallery-3.jpg" alt="Briefing pemandu wisata" loading="lazy">
+                    <figcaption>Briefing Pemandu Wisata</figcaption>
                 </figure>
                 <figure class="gallery-item">
-                    <div class="placeholder-img" style="width:100%;height:100%;">
-                        <div><i class="bi bi-image" style="font-size:2.5rem;"></i><br>Keindahan Alam<br><small>gallery-4.jpg</small></div>
-                    </div>
-                    <figcaption>Keindahan Alam</figcaption>
+                    <img src="assets/img/gallery-4.jpg" alt="Kendaraan wisata pickup" loading="lazy">
+                    <figcaption>Kendaraan Wisata Pickup</figcaption>
                 </figure>
             </div>
         </div>
@@ -398,9 +390,7 @@ input, textarea { font-family: inherit; font-size: 1rem; }
             <div class="packages-grid">
                 <article class="package-card">
                     <div class="package-img">
-                        <div class="placeholder-img" style="width:100%;height:100%;">
-                            <div><i class="bi bi-image" style="font-size:2.5rem;"></i><br>package-1.jpg</div>
-                        </div>
+                        <img src="assets/img/package-1.jpg" alt="Paket Hemat - Pickup wisata" loading="lazy">
                         <span class="package-badge">Hemat</span>
                     </div>
                     <div class="package-content">
@@ -421,9 +411,7 @@ input, textarea { font-family: inherit; font-size: 1rem; }
 
                 <article class="package-card featured">
                     <div class="package-img">
-                        <div class="placeholder-img" style="width:100%;height:100%;">
-                            <div><i class="bi bi-image" style="font-size:2.5rem;"></i><br>package-2.jpg</div>
-                        </div>
+                        <img src="assets/img/package-2.jpg" alt="Paket Keluarga - Rombongan" loading="lazy">
                         <span class="package-badge featured">Populer</span>
                     </div>
                     <div class="package-content">
@@ -446,9 +434,7 @@ input, textarea { font-family: inherit; font-size: 1rem; }
 
                 <article class="package-card">
                     <div class="package-img">
-                        <div class="placeholder-img" style="width:100%;height:100%;">
-                            <div><i class="bi bi-image" style="font-size:2.5rem;"></i><br>package-3.jpg</div>
-                        </div>
+                        <img src="assets/img/package-3.jpg" alt="Paket Rombongan - Kegiatan Outbound" loading="lazy">
                         <span class="package-badge">Rombongan</span>
                     </div>
                     <div class="package-content">
