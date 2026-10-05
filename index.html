@@ -150,6 +150,8 @@ input, textarea { font-family: inherit; font-size: 1rem; }
 /* --- Video --- */
 .video-wrapper { max-width: 900px; margin: 0 auto; border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow-lg); aspect-ratio: 16/9; }
 .video-wrapper iframe { width: 100%; height: 100%; }
+.video-wrapper video { width: 100%; height: 100%; object-fit: cover; display: block; background: var(--dark); }
+.video-wrapper.portrait { aspect-ratio: 9/16; max-width: 420px; }
 .video-note { text-align: center; margin-top: 1rem; color: var(--medium-gray); font-size: 0.9375rem; }
 
 /* --- Paket Wisata --- */
@@ -367,19 +369,15 @@ input, textarea { font-family: inherit; font-size: 1rem; }
                 <h2>Video Wisata</h2>
                 <p>Tonton video promosi untuk melihat suasana tempat wisata secara langsung</p>
             </div>
-            <div class="video-wrapper">
-                <iframe
-                    src="https://drive.google.com/file/d/1QBB7keKr22TvTXhZlY41shgzt4roztX2/preview"
-                    title="Video Promosi Wisata Pangalengan"
-                    frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    allowfullscreen>
-                </iframe>
+            <div class="video-wrapper portrait">
+                <video controls playsinline preload="metadata" poster="assets/img/hero.jpg">
+                    <source src="assets/video/wisata.mp4" type="video/mp4">
+                    Browser kamu tidak mendukung pemutaran video.
+                </video>
             </div>
             <p class="video-note">
                 Video dokumentasi kegiatan wisata.
-                <a href="https://drive.google.com/file/d/1QBB7keKr22TvTXhZlY41shgzt4roztX2/view?usp=sharing" target="_blank" rel="noopener">Buka di tab baru</a>
-                jika video tidak tampil (pastikan akses video disetel publik).
+                <a href="https://drive.google.com/file/d/1QBB7keKr22TvTXhZlY41shgzt4roztX2/view?usp=sharing" target="_blank" rel="noopener">Buka video asli di Google Drive</a>.
             </p>
         </div>
     </section>
