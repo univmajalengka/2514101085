@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wisata Majalengka - Promosi Destinasi Wisata</title>
+    <meta name="description" content="Landing page promosi tempat wisata Majalengka. Foto kegiatan, video, paket wisata lengkap dengan deskripsi.">
+    <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navbar / Menu Aplikasi -->
+    <header class="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo">
+                <span class="logo-icon"><i class="bi bi-compass"></i></span>
+                Wisata Majalengka
+            </a>
+            <button class="nav-toggle" id="navToggle" aria-label="Buka Menu Navigasi">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav class="nav-menu" id="navMenu">
+                <ul>
+                    <li><a href="#home" class="nav-link active">Home</a></li>
+                    <li><a href="#tentang" class="nav-link">Tentang</a></li>
+                    <li><a href="#galeri" class="nav-link">Galeri</a></li>
+                    <li><a href="#video" class="nav-link">Video</a></li>
+                    <li><a href="#paket-wisata" class="nav-link">Paket Wisata</a></li>
+                    <li><a href="#kontak" class="nav-link">Kontak</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+            <div class="hero-text">
+                <h1>Jelajahi Keindahan Wisata Majalengka</h1>
+                <p>Temukan tempat wisata menarik, nikmati foto kegiatan wisata, tonton video, dan pilih paket wisata sesuai keinginan kamu.</p>
+                <div class="hero-cta">
+                    <a href="#paket-wisata" class="btn btn-primary">
+                        <i class="bi bi-map-fill"></i> Lihat Paket Wisata
+                    </a>
+                    <a href="#galeri" class="btn btn-secondary">
+                        <i class="bi bi-images"></i> Lihat Galeri
+                    </a>
+                </div>
+            </div>
+        </div>
+        <a href="#tentang" class="scroll-down" aria-label="Scroll ke bawah">
+            <i class="bi bi-chevron-down"></i>
+        </a>
+    </section>
+
+    <!-- Tentang / Promo Wisata -->
+    <section id="tentang" class="section tentang">
+        <div class="container">
+            <div class="section-header">
+                <h2>Tentang Wisata Majalengka</h2>
+                <p>Promosi tempat wisata yang kaya akan keindahan alam dan kegiatan seru untuk dikunjungi</p>
+            </div>
+            <div class="tentang-content">
+                <div class="tentang-img">
+                    <img src="assets/img/about.svg" alt="Wisata Majalengka" loading="lazy">
+                </div>
+                <div class="tentang-text">
+                    <h3>Wisata Alam yang Menawan</h3>
+                    <p>Majalengka menyimpan berbagai destinasi wisata menarik, mulai dari wisata alam, rekreasi keluarga, hingga spot foto yang instagramable. Setiap tempat memiliki daya tarik uniknya sendiri untuk kamu jelajahi bersama keluarga maupun teman.</p>
+                    <ul class="feature-list">
+                        <li><i class="bi bi-check-circle-fill"></i> Spot foto menarik untuk dokumentasi</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Beragam kegiatan wisata yang seru</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Cocok untuk wisata keluarga dan rombongan</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Fasilitas yang memadai</li>
+                    </ul>
+                    <a href="#galeri" class="btn btn-outline">
+                        Lihat Foto Kegiatan <i class="bi bi-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Galeri Foto Kegiatan Wisata -->
+    <section id="galeri" class="section galeri bg-light">
+        <div class="container">
+            <div class="section-header">
+                <h2>Galeri Foto Kegiatan Wisata</h2>
+                <p>Dokumentasi kegiatan wisata yang bisa kamu nikmati saat berkunjung</p>
+            </div>
+            <div class="gallery-grid" id="galleryGrid">
+                <figure class="gallery-item">
+                    <img src="assets/img/gallery-1.svg" alt="Kegiatan wisata - Foto 1" loading="lazy">
+                    <figcaption>Kegiatan Wisata Seru</figcaption>
+                </figure>
+                <figure class="gallery-item">
+                    <img src="assets/img/gallery-2.svg" alt="Kegiatan wisata - Foto 2" loading="lazy">
+                    <figcaption>Spot Foto Menarik</figcaption>
+                </figure>
+                <figure class="gallery-item">
+                    <img src="assets/img/gallery-3.svg" alt="Kegiatan wisata - Foto 3" loading="lazy">
+                    <figcaption>Wisata Bersama Keluarga</figcaption>
+                </figure>
+                <figure class="gallery-item">
+                    <img src="assets/img/gallery-4.svg" alt="Kegiatan wisata - Foto 4" loading="lazy">
+                    <figcaption>Keindahan Alam</figcaption>
+                </figure>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+        <span class="lightbox-close" id="lightboxClose">&times;</span>
+        <img src="" alt="" id="lightboxImg">
+        <div class="lightbox-caption" id="lightboxCaption"></div>
+        <button class="lightbox-prev" id="lightboxPrev"><i class="bi bi-chevron-left"></i></button>
+        <button class="lightbox-next" id="lightboxNext"><i class="bi bi-chevron-right"></i></button>
+    </div>
+
+    <!-- Video Wisata -->
+    <section id="video" class="section video">
+        <div class="container">
+            <div class="section-header">
+                <h2>Video Wisata</h2>
+                <p>Tonton video promosi untuk melihat suasana tempat wisata secara langsung</p>
+            </div>
+            <div class="video-wrapper">
+                <iframe 
+                    src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
+                    title="Video Promosi Wisata Majalengka" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    allowfullscreen>
+                </iframe>
+            </div>
+            <p class="video-note">Ganti link video di atas dengan video promosi wisata sesuai kebutuhan.</p>
+        </div>
+    </section>
+
+    <!-- Daftar Paket Wisata -->
+    <section id="paket-wisata" class="section paket-wisata bg-light">
+        <div class="container">
+            <div class="section-header">
+                <h2>Daftar Paket Wisata</h2>
+                <p>Pilih paket wisata yang sesuai dengan kebutuhan dan budget kamu</p>
+            </div>
+            <div class="packages-grid">
+                <article class="package-card">
+                    <div class="package-img">
+                        <img src="assets/img/package-1.svg" alt="Paket Wisata Hemat" loading="lazy">
+                        <span class="package-badge">Hemat</span>
+                    </div>
+                    <div class="package-content">
+                        <h3>Paket Wisata Hemat</h3>
+                        <div class="package-price">
+                            <span class="price">Rp 75.000</span>
+                            <span class="per">/ Orang</span>
+                        </div>
+                        <p class="package-desc">Paket wisata ekonomis cocok untuk liburan singkat dengan fasilitas dasar.</p>
+                        <ul class="package-features">
+                            <li><i class="bi bi-check-lg"></i> Tiket Masuk</li>
+                            <li><i class="bi bi-check-lg"></i> Parkir Kendaraan</li>
+                            <li><i class="bi bi-check-lg"></i> Pemandu Wisata</li>
+                        </ul>
+                        <a href="#" class="btn btn-primary btn-block">Lihat Detail</a>
+                    </div>
+                </article>
+
+                <article class="package-card featured">
+                    <div class="package-img">
+                        <img src="assets/img/package-2.svg" alt="Paket Wisata Keluarga" loading="lazy">
+                        <span class="package-badge featured">Populer</span>
+                    </div>
+                    <div class="package-content">
+                        <h3>Paket Wisata Keluarga</h3>
+                        <div class="package-price">
+                            <span class="price">Rp 150.000</span>
+                            <span class="per">/ Orang</span>
+                        </div>
+                        <p class="package-desc">Paket ideal untuk wisata bersama keluarga dengan fasilitas lengkap dan nyaman.</p>
+                        <ul class="package-features">
+                            <li><i class="bi bi-check-lg"></i> Tiket Masuk</li>
+                            <li><i class="bi bi-check-lg"></i> Makan Siang</li>
+                            <li><i class="bi bi-check-lg"></i> Minuman</li>
+                            <li><i class="bi bi-check-lg"></i> Pemandu Wisata</li>
+                            <li><i class="bi bi-check-lg"></i> Dokumentasi</li>
+                        </ul>
+                        <a href="#" class="btn btn-primary btn-block">Lihat Detail</a>
+                    </div>
+                </article>
+
+                <article class="package-card">
+                    <div class="package-img">
+                        <img src="assets/img/package-3.svg" alt="Paket Wisata Rombongan" loading="lazy">
+                        <span class="package-badge">Rombongan</span>
+                    </div>
+                    <div class="package-content">
+                        <h3>Paket Wisata Rombongan</h3>
+                        <div class="package-price">
+                            <span class="price">Rp 250.000</span>
+                            <span class="per">/ Orang</span>
+                        </div>
+                        <p class="package-desc">Paket khusus untuk rombongan dengan fasilitas eksklusif dan harga terbaik.</p>
+                        <ul class="package-features">
+                            <li><i class="bi bi-check-lg"></i> Tiket Masuk</li>
+                            <li><i class="bi bi-check-lg"></i> Makan Siang & Snack</li>
+                            <li><i class="bi bi-check-lg"></i> Transportasi</li>
+                            <li><i class="bi bi-check-lg"></i> Pemandu Wisata</li>
+                            <li><i class="bi bi-check-lg"></i> Ruang Istirahat</li>
+                        </ul>
+                        <a href="#" class="btn btn-primary btn-block">Lihat Detail</a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Kontak -->
+    <section id="kontak" class="section kontak">
+        <div class="container">
+            <div class="section-header">
+                <h2>Kontak Kami</h2>
+                <p>Punya pertanyaan tentang wisata? Jangan ragu untuk menghubungi kami</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="icon">
+                            <i class="bi bi-geo-alt-fill"></i>
+                        </div>
+                        <div>
+                            <h4>Lokasi</h4>
+                            <p>Majalengka, Jawa Barat, Indonesia</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="icon">
+                            <i class="bi bi-telephone-fill"></i>
+                        </div>
+                        <div>
+                            <h4>Telepon</h4>
+                            <p>+62 123 4567 890</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="icon">
+                            <i class="bi bi-envelope-fill"></i>
+                        </div>
+                        <div>
+                            <h4>Email</h4>
+                            <p>wisata@majalengka.ac.id</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="icon">
+                            <i class="bi bi-whatsapp"></i>
+                        </div>
+                        <div>
+                            <h4>WhatsApp</h4>
+                            <p>+62 123 4567 890</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form>
+                        <div class="form-group">
+                            <label for="nama">Nama Lengkap</label>
+                            <input type="text" id="nama" placeholder="Masukkan nama kamu">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" placeholder="Masukkan email kamu">
+                        </div>
+                        <div class="form-group">
+                            <label for="pesan">Pesan</label>
+                            <textarea id="pesan" rows="4" placeholder="Tulis pesan kamu disini..."></textarea>
+                        </div>
+                        <button type="button" class="btn btn-primary btn-block">
+                            <i class="bi bi-send-fill"></i> Kirim Pesan
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="#" class="logo-footer">
+                        <i class="bi bi-compass"></i> Wisata Majalengka
+                    </a>
+                    <p>Landing page promosi tempat wisata Majalengka. Jelajahi keindahan alam dan nikmati pengalaman wisata terbaik.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                        <a href="#" aria-label="TikTok"><i class="bi bi-tiktok"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-col">
+                        <h4>Menu Aplikasi</h4>
+                        <ul>
+                            <li><a href="#home">Home</a></li>
+                            <li><a href="#tentang">Tentang</a></li>
+                            <li><a href="#galeri">Galeri</a></li>
+                            <li><a href="#video">Video</a></li>
+                            <li><a href="#paket-wisata">Paket Wisata</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Paket Wisata</h4>
+                        <ul>
+                            <li><a href="#paket-wisata">Paket Hemat</a></li>
+                            <li><a href="#paket-wisata">Paket Keluarga</a></li>
+                            <li><a href="#paket-wisata">Paket Rombongan</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Kontak</h4>
+                        <ul>
+                            <li><a href="#kontak">Hubungi Kami</a></li>
+                            <li><a href="#">FAQ</a></li>
+                            <li><a href="#">Syarat & Ketentuan</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Wisata Majalengka. Dibuat untuk promosi objek wisata.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <button class="back-to-top" id="backToTop" aria-label="Kembali ke atas">
+        <i class="bi bi-arrow-up"></i>
+    </button>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
